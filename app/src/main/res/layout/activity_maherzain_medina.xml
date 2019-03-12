@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.android.musically.maherzain_medina">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="6"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:id="@+id/Title"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medina"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/Imagesong"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_weight="6"
+            android:src="@drawable/songmaher"
+            android:scaleType="centerCrop"/>
+        <SeekBar
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <Button
+                    android:onClick="forward"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/play"
+                    android:background="@drawable/forward" />
+
+                <Button
+                    android:id="@+id/play"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/play" />
+
+                <Button
+                    android:onClick="back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toStartOf="@+id/play"
+                    android:background="@drawable/backward" />
+
+                <Button
+                    android:onClick="main"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/music" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
